@@ -18,3 +18,10 @@ function createTodoData($todoText)
 '")';
     $dbh->query($sql);
 }
+
+function getAllRecords()
+{
+    $dbh = connectPdo();
+    $sql = 'SELECT * FROM todos';
+    return $dbh->query($sql)->fetchAll(PDO::FETCH_ASSOC);
+}
