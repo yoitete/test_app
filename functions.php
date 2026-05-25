@@ -3,4 +3,9 @@
 
   function createData($post)
   {
+    createTodoData($post['content']);
   }
+  function getTodoList()
+{
+    return getAllRecords();
+}
